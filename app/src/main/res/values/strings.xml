@@ -20,4 +20,9 @@
     <string name="first_regist">長押しで選択できます</string>
     <string name="test_num">tel:117</string>
     <string name="search">検索画面</string>
+    <string name="edit_hint1">登録する名前を入力してください</string>
+    <string name="edit_hint2">登録する番号を入力してください</string>
+    <string name="get_lib">ライブラリから選択する</string>
+    <string name="determination">決定</string>
+
 </resources>

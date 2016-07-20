@@ -19,14 +19,14 @@
         android:inputType="text"
         android:id="@+id/importantName"
         android:layout_margin="10dp"
-        android:hint="登録名を入力してください"/>
+        android:hint="@string/edit_hint1"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:id="@+id/importantNum"
-        android:hint="登録番号を入力してください"
+        android:hint="@string/edit_hint2"
         android:layout_margin="10dp"/>
 
     <LinearLayout
@@ -44,7 +44,7 @@
             android:textColor="@color/fontWhite"
             android:padding="3dp"
             android:background="@drawable/button_lib"
-            android:text="ライブラリから選択する"/>
+            android:text="@string/get_lib"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
             android:id="@+id/next"
             android:textColor="@color/fontWhite"
             android:background="@drawable/button_determination"
-            android:text="決定"/>
+            android:text="@string/determination"/>
 
 
     </LinearLayout>
