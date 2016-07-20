@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryOrange">#ff8c00</color>
+    <color name="colorPrimaryDarkOrange">#ff4500</color>
+    <color name="buttonBackground">#4B8FC3</color>
+    <color name="buttonBackground2">#1B2C50</color>
+    <color name="fontWhite">#FFF</color>
+    <color name="determination_button">#DE4830</color>
+    <color name="lib_button">#60C4B0</color>
+    <color name="systemBackground">#F5F5F5</color>
+</resources>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">1TapCall</string>
+    <string name="menu_search">search</string>
+    <string name="registration">登録</string>
+    <string name="fire_num">tel:119</string>
+    <string name="fire">消防</string>
+    <string name="police_num">tel:110</string>
+    <string name="police">警察</string>
+    <string name="coast_guard_num">tel:118</string>
+    <string name="coast_guard">海上保安庁</string>
+    <string name="help_children_num">tel:189</string>
+    <string name="help_children">児童相談所</string>
+    <string name="tell_num">tel:171</string>
+    <string name="tell">伝言ダイヤル</string>
+    <string name="not_regist">登録項目を入力してください</string>
+    <string name="not_regist_num">登録電話番号が入力されていません</string>
+    <string name="not_regist_name">登録名が登録されていません</string>
+    <string name="not_regist_callNum">電話番号が登録されていないためご利用できません</string>
+    <string name="search_hint">検索する文字を入力してください</string>
+    <string name="first_regist">長押しで選択できます</string>
+    <string name="test_num">tel:117</string>
+    <string name="search">検索画面</string>
+</resources>
