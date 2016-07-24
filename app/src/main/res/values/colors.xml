@@ -11,4 +11,6 @@
     <color name="determination_button">#DE4830</color>
     <color name="lib_button">#60C4B0</color>
     <color name="systemBackground">#F5F5F5</color>
+    <color name="call_background">#C14471</color>
+    <color name="fontBlack">#000000</color>
 </resources>
