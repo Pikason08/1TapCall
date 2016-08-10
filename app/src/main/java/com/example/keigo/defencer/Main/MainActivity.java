@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity  {
         @Override
         public boolean onLongClick(View v){
 
-            DialogFragment_list dialog = new DialogFragment_list(MainActivity.this);
+            DialogFragment_list dialog = new DialogFragment_list();
             dialog.show(getFragmentManager(),"dialog");
 
             return false;

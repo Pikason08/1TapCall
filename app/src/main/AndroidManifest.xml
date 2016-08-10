@@ -29,11 +29,6 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_setting" />
         </receiver>
-        <service android:name=".widget.WidgetService">
-            <intent-filter>
-                <action android:name="BUTTON_CLICK_ACTION"  />
-            </intent-filter>
-        </service>
         <activity android:name=".Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

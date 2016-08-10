@@ -8,8 +8,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
+import com.example.keigo.defencer.Main.MainActivity;
 import com.example.keigo.defencer.R;
 import com.example.keigo.defencer.registration.InputActivity;
 
@@ -20,41 +23,56 @@ import com.example.keigo.defencer.registration.InputActivity;
 
 public class WidgetProvider extends AppWidgetProvider {
 
+    private int appWidgeteId;
+    String num;
+    String name;
+    boolean times;
+    private static String filter = "android.appwidget.action.APPWIDGET_UPDATE";
+
+    @Override
+    public void onEnabled(Context context){
+        super.onEnabled(context);
+        Log.d("check","onEnabled");
+    }
+
     @Override
     public void onUpdate(Context context, AppWidgetManager manager, int[] appId) {
         super.onUpdate(context, manager, appId);
-        RemoteViews remoteviews = new RemoteViews(context.getPackageName(), R.layout.widget);
-        SharedPreferences SaveData = context.getSharedPreferences("save",Context.MODE_PRIVATE);
-        String num = SaveData.getString("importantNum", "ボタンを押すと登録できます");
-        String name = SaveData.getString("importantName", "none");
+        Log.d("check","onUpdate");
+        Log.d("check","context:"+context);
+        Log.d("check","manager:"+manager);
+        Log.d("check","appId:"+appId[0]);
 
+        RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget);
+        Intent intent = new Intent(context, WidgetService.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+        remoteViews.setOnClickPendingIntent(R.id.widget_multiply, pendingIntent);
+        Log.d("check","onUpdate is end");
+   }
 
-        if (name.isEmpty()){
-            Intent intent = new Intent(context, InputActivity.class);
-            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+    @Override
+    public void onReceive(Context context, Intent intent){
+        super.onReceive(context, intent);
 
-            remoteviews.setOnClickPendingIntent(R.id.widget_multiply, pendingIntent);
-            manager.updateAppWidget(appId, remoteviews);
-        }else {
-            remoteviews.setTextViewText(R.id.widgetSetName, name);
-            remoteviews.setOnClickPendingIntent(R.id.widget_multiply, clickCall(context,num));
+        String action = intent.getAction();
+        if (filter.equals(action)){
+            Toast.makeText(context, "Widget Click now!! ", Toast.LENGTH_SHORT).show();
         }
-
-
-        pushWidgetUpdate(context, remoteviews);
+        Log.d("check", "getAction :"+ action);
     }
 
-    public static PendingIntent clickCall(Context context, String number) {
-        Uri uri = Uri.parse(number);
-        Intent intent = new Intent(Intent.ACTION_DIAL, uri);
-        intent.setAction("UPDATE_WIDGET");
 
-        return PendingIntent.getBroadcast(context, 0, intent, 0);
+
+
+    @Override
+    public void onDeleted(Context context, int[] appWidgetId){
+        super.onDeleted(context, appWidgetId);
+        Log.d("check", "onDeleted");
     }
 
-    public static void pushWidgetUpdate(Context context, RemoteViews remoteViews){
-        ComponentName widget =  new ComponentName(context, WidgetProvider.class);
-        AppWidgetManager manager = AppWidgetManager.getInstance(context);
-        manager.updateAppWidget(widget, remoteViews);
+    @Override
+    public void onDisabled(Context context){
+        super.onDisabled(context);
+        Log.d("check","onDisabled");
     }
 }

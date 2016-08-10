@@ -14,12 +14,7 @@ import com.example.keigo.defencer.registration.InputActivity;
  */
 public class DialogFragment_list extends android.app.DialogFragment {
 
-    Activity mActivity;
 
-
-    public DialogFragment_list(Activity activity){
-        mActivity = activity;
-    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){

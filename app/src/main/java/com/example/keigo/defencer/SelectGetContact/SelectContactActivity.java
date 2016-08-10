@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.example.keigo.defencer.Main.MainActivity;
 import com.example.keigo.defencer.R;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by keigo on 2016/04/06.
@@ -53,8 +54,8 @@ public class SelectContactActivity extends AppCompatActivity implements AdapterV
     protected void initToolBar(){
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle(getString(R.string.choose_display));
 //        toolbar.inflateMenu(R.menu.menu);
-
 //        toolbar.setOnMenuItemClickListener(goSearch);
     }
 
