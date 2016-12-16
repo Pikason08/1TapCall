@@ -1,117 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.example.keigo.defencer.Main.MainActivity"
+    android:id="@+id/linear_layout_main">
 
-    <android.support.v7.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        app:titleTextColor="@android:color/white"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar_main"
-        android:background="@color/colorPrimaryOrange"/>
+        android:layout_height="wrap_content">
 
-    <LinearLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="40dp">
+        android:layout_height="match_parent">
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="20dp">
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
 
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/zero"
-                android:layout_gravity="center"
-                android:textColor="@color/fontWhite"
-                android:background="@drawable/view_radious"/>
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="25dp"/>
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/one"
-                android:layout_gravity="center"
-                android:text="@string/fire"
-                android:textColor="@color/fontWhite"
-                android:background="@drawable/view_radious"/>
-
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="32dp"
+                android:src="@drawable/ic_add_white_24dp"
+                android:id="@+id/floating_button"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="20dp">
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/two"
-                android:layout_gravity="center"
-                android:text="@string/police"
-                android:textColor="@color/fontWhite"
-                android:background="@drawable/view_radious"/>
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="20dp"/>
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/three"
-                android:layout_gravity="center"
-                android:text="@string/coast_guard"
-                android:textColor="@color/fontWhite"
-                android:background="@drawable/view_radious"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="20dp">
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/four"
-                android:layout_gravity="center"
-                android:text="@string/help_children"
-                android:textColor="@color/fontWhite"
-                android:background="@drawable/view_radious"/>
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="20dp"/>
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:id="@+id/five"
-                android:layout_gravity="center"
-                android:text="@string/tell"
-                android:textColor="@color/fontWhite"
-                android:background="@drawable/view_radious"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-
-
-
+    </FrameLayout>
 </LinearLayout>

@@ -1,17 +1,10 @@
 <resources>
-    <string name="app_name">1TapCall</string>
+    <string name="app_name">1TapDial</string>
+    <string name="choose_display">選択画面</string>
+    <string name="detail_display">詳細画面</string>
+    <string name="input_display">入力画面</string>
     <string name="menu_search">search</string>
     <string name="registration">登録</string>
-    <string name="fire_num">tel:119</string>
-    <string name="fire">消防</string>
-    <string name="police_num">tel:110</string>
-    <string name="police">警察</string>
-    <string name="coast_guard_num">tel:118</string>
-    <string name="coast_guard">海上保安庁</string>
-    <string name="help_children_num">tel:189</string>
-    <string name="help_children">児童相談所</string>
-    <string name="tell_num">tel:171</string>
-    <string name="tell">伝言ダイヤル</string>
     <string name="not_regist">登録項目を入力してください</string>
     <string name="not_regist_num">登録電話番号が入力されていません</string>
     <string name="not_regist_name">登録名が登録されていません</string>
@@ -24,4 +17,30 @@
     <string name="edit_hint2">登録する番号を入力してください</string>
     <string name="get_lib">ライブラリから選択する</string>
     <string name="determination">決定</string>
+    <string name="loading_now">読み込み中です、少々お待ちください</string>
+    <string name="few_length">入力された文字が少なすぎます</string>
+    <string name="first_widget_string">ボタンを長押しで登録できます</string>
+    <string name="notNum">none</string>
+    <string name="add_item">連絡先追加</string>
+    <string name="add_tel">tel:</string>
+    <string name="registrationed">登録されました</string>
+    <string name="urgency_outgoing">緊急発信</string>
+    <string name="registration_contact_address">登録連絡先</string>
+    <string name="error_delete">申し訳ございません、削除に失敗しました</string>
+    <string name="one_more">再試行</string>
+    <string name="add_mark">+</string>
+    <string-array name="emergency_contact_name">
+        <item>警察</item>
+        <item>消防</item>
+        <item>海上保安庁</item>
+        <item>児童相談所</item>
+        <item>伝言ダイヤル</item>
+    </string-array>
+    <string-array name="emergency_contact_address">
+        <item>tel:110</item>
+        <item>tel:119</item>
+        <item>tel:118</item>
+        <item>tel:189</item>
+        <item>tel:171</item>
+    </string-array>
 </resources>
