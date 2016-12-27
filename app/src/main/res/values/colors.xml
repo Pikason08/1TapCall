@@ -13,4 +13,5 @@
     <color name="systemBackground">#F5F5F5</color>
     <color name="call_background">#C14471</color>
     <color name="fontBlack">#000000</color>
+    <color name="underLine">#50B300</color>
 </resources>

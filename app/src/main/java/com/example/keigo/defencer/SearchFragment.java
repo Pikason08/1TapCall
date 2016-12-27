@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.jp.keigo.dial.R;
+
 /**
  * Created by keigo on 2016/07/14.
  *

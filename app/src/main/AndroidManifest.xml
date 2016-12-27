@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.keigo.defencer">
+    package="com.jp.keigo.dial">
 
     <uses-feature android:name="android.hardware.telephony"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
@@ -21,7 +21,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <receiver android:name=".widget.WidgetProvider" >
+        <receiver android:name="com.example.keigo.defencer.widget.WidgetProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -29,13 +29,13 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_setting" />
         </receiver>
-        <activity android:name=".Main.MainActivity">
+        <activity android:name="com.example.keigo.defencer.Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".registration.InputActivity"/>
-        <activity android:name=".SelectGetContact.SelectContactActivity"/>
+        <activity android:name="com.example.keigo.defencer.registration.InputActivity"/>
+        <activity android:name="com.example.keigo.defencer.SelectGetContact.SelectContactActivity"/>
     </application>
 </manifest>

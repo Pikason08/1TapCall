@@ -9,7 +9,8 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.widget.RemoteViews;
 
-import com.example.keigo.defencer.R;
+import com.jp.keigo.dial.R;
+
 
 /**
  * Created by keigo on 2016/07/31.

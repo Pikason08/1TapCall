@@ -13,8 +13,8 @@ import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import com.example.keigo.defencer.Main.MainActivity;
-import com.example.keigo.defencer.R;
 import com.example.keigo.defencer.registration.InputActivity;
+import com.jp.keigo.dial.R;
 
 /**
  * Created by keigo on 2016/07/21.
